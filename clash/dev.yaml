@@ -1,0 +1,37 @@
+# 开发者工具 — GitHub / npm / PyPI / Hugging Face / Notion / Figma
+# Suggested policy: PROXY
+# Clash group: 🛠️ 开发者
+# Rules: 30
+# behavior: domain
+# Built by scripts/build.py. Not auto-generated on push.
+payload:
+  - +.github.com
+  - +.githubusercontent.com
+  - +.githubassets.com
+  - +.npmjs.org
+  - +.npmjs.com
+  - +.pypi.org
+  - +.pythonhosted.org
+  - +.huggingface.co
+  - +.onorca.dev
+  - +.kiro.dev
+  - +.opencode.ai
+  - +.usemagpie.ai
+  - +.zenmux.ai
+  - +.kilo.ai
+  - +.venice.ai
+  - +.commandcode.ai
+  - +.typesafe.ai
+  - +.charm.land
+  - +.stencil.so
+  - +.manus.im
+  - +.minimax.io
+  - +.notion.so
+  - +.figma.com
+  - +.proton.me
+  - +.dropbox.com
+  - +.obsidian.md
+  - +.immersivetranslate.com
+  - +.trancy.org
+  - +.posthog.com
+  - +.workers.dev

@@ -1,0 +1,25 @@
+# 抖音与字节 — 抖音 / 字节跳动，默认可走代理，策略组里可改直连
+# Suggested policy: PROXY
+# Clash group: 🎵 字节跳动
+# Rules: 18
+# behavior: classical
+# Built by scripts/build.py. Not auto-generated on push.
+payload:
+  - DOMAIN-KEYWORD,zjcdn.com
+  - DOMAIN-SUFFIX,snssdk.com
+  - DOMAIN-SUFFIX,amemv.com
+  - DOMAIN-SUFFIX,iesdouyin.com
+  - DOMAIN-SUFFIX,zijieapi.com
+  - DOMAIN-KEYWORD,douyin
+  - DOMAIN-SUFFIX,byteimg.com
+  - DOMAIN-SUFFIX,bytedance.com
+  - DOMAIN-SUFFIX,bytedance.net
+  - DOMAIN-SUFFIX,bytedns.net
+  - DOMAIN-SUFFIX,pstatp.com
+  - DOMAIN-SUFFIX,douyinpic.com
+  - DOMAIN-SUFFIX,douyinvod.com
+  - DOMAIN-SUFFIX,douyinstatic.com
+  - DOMAIN-SUFFIX,volces.com
+  - DOMAIN-SUFFIX,volcvideo.com
+  - DOMAIN-SUFFIX,toutiaoimg.com
+  - DOMAIN-SUFFIX,toutiaoimg.cn

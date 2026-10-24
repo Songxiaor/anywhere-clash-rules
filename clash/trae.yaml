@@ -1,0 +1,30 @@
+# TRAE — TRAE / TRAE SOLO 官方域名，建议绑日本节点
+# Suggested policy: PROXY
+# Clash group: 🤖 TRAE
+# Rules: 23
+# behavior: domain
+# Built by scripts/build.py. Not auto-generated on push.
+payload:
+  - +.trae.ai
+  - +.traeapi.us
+  - +.traecdn.us
+  - +.traecontent.com
+  - +.trae.com
+  - +.traeai.us
+  - +.solo-deeplink.ai
+  - +.icube-api-sg.tiktok-row.net
+  - +.ide-market-us.tiktok-row.net
+  - +.ide-us.tiktok-row.net
+  - +.p-icube-feecback-oversea-sg.tiktok-row.net
+  - +.solo-web.tiktok-row.net
+  - +.copilot-sg-og.byteintl.net
+  - +.copilot-og.byteintl.net
+  - +.copilot-sg.byteintl.net
+  - +.copilot.byteintl.net
+  - +.copilot-cn.bytedance.net
+  - +.icube-api.bytedance.net
+  - +.ide-market.bytedance.net
+  - +.cdn-tos.bytedance.net
+  - +.tosv.tiktokd.org
+  - +.voice.ap-southeast-1.bytepluses.com
+  - +.p16-market-sg.ibyteimg.com

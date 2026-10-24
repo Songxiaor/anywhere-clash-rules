@@ -1,55 +1,44 @@
 # anywhere-clash-rules
 
-同一套分流规则，两个客户端各复制一条链接导入。
+一套给 Clash / Clash Verge / Mihomo 用的完整分流。把下面 **9 条 YAML** 全部加上（或直接粘贴 `clash-verge.js`），不需要再去找 Loyalsoldier、ACL4SSR、VPSDance。
 
-- **源文件**：[`anywhere/*.arrs`](anywhere/) — Anywhere 规则集，只改这里
-- **生成文件**：[`clash/*.yaml`](clash/) — Clash Verge / Mihomo `rule-providers`，由脚本自动转换，不要手改
+官方大陆白名单、广告、GFW、海外 AI 域名已经按类型融进对应规则包。
 
-改 `.arrs` 并 push 到 `main` 后，GitHub Action 会重新生成 YAML 和本页链接表，两边规则保持同步。
+Anywhere 用户继续用 [`anywhere/*.arrs`](anywhere/)，和 Clash 包独立维护，**不会自动同步**。要更新 Clash 包时在本机运行 `python3 scripts/build.py` 再提交。
 
-## 复制链接
+## 九条规则（按匹配顺序）
 
-`AI-luodi-proxy` 含 `google.com` / `gmail.com` / `x.com`，是 Anywhere 里绑「AI 落地节点」用的桶。Clash Verge 不要把它整组丢进 `🤖 AI服务`，否则会抢走谷歌和社交流量。
+越靠前越优先。AI / TRAE / 开发者 会盖过后面的国内直连和 GFW 列表。
 
 <!-- BEGIN:LINKS -->
 <!-- END:LINKS -->
 
-第三方（不是本仓库维护）：[chikacya AI.arrs](https://raw.githubusercontent.com/chikacya/anywhere-rules/main/rules/common/AI.arrs) 给 Anywhere 用。Clash Verge 更建议用 [VPSDance/ai-proxy-rules](https://github.com/VPSDance/ai-proxy-rules)。
+| 包 | 里面有什么 |
+| --- | --- |
+| `trae` | TRAE / TRAE SOLO |
+| `ai` | Cursor、Claude、ChatGPT、Gemini、Grok、Copilot；已去掉 `google.com` / `x.com` 整站 |
+| `bytedance` | 抖音、字节跳动（策略组里可改直连） |
+| `dev` | GitHub、npm、PyPI、Hugging Face、Notion、Figma |
+| `social` | Telegram、Discord、WhatsApp、X、Instagram、WebRTC STUN |
+| `stream` | YouTube、Netflix、Disney+、Spotify、TikTok 国际版 |
+| `reject` | 广告与追踪 |
+| `direct` | 国内 App、国内 AI、Apple 下载/iCloud、局域网、CN IP |
+| `proxy` | GFW、Google 其余、非 CN 后缀 |
 
-## Anywhere
+## Clash Verge（推荐）
 
-1. 打开规则集 → 添加订阅
-2. 粘贴上表 **Anywhere `.arrs`** 列的链接
-3. 按「建议策略」把该规则集指到直连或某个节点
+打开 [clash-verge.js](clash-verge.js)，全选复制，粘贴到 **订阅 → 全局扩展脚本**，保存。再启用带节点的订阅。
 
-## Clash Verge
+脚本会拉取上面 9 个 YAML，建好策略组，按表里的顺序分流。Cursor / Claude 桌面版请开 TUN。
 
-Clash Verge **不能**直接订阅 `.arrs`。用上表 **Clash Verge `.yaml`** 列，写进全局扩展脚本的 `rule-providers`：
+## 其他 Clash / Mihomo 客户端
 
-```js
-const mine = (id) => ({
-  type: "http",
-  behavior: "classical",
-  format: "yaml",
-  url: `https://raw.githubusercontent.com/Songxiaor/anywhere-clash-rules/main/clash/${id}.yaml`,
-  path: `./ruleset/songxiaor/${id}.yaml`,
-  interval: 86400,
-});
-```
+在配置里加 9 个 `rule-providers`，`rules` 顺序与上表一致。`reject` / `proxy` / `trae` / `dev` 用 `behavior: domain`，其余用 `classical`。不要漏加，也不要打乱顺序。
 
-规则顺序：更具体的名单在前。直连类放在 Loyalsoldier / GEOIP,CN 之前，代理类放在 `MATCH` 之前。
-
-```text
-RULE-SET,China-App-direct,全局直连
-RULE-SET,Apple-download-direct,全局直连
-RULE-SET,Overseas-Dev-Tools-proxy,节点选择
-```
-
-## 本地转换
+## 维护
 
 ```bash
-python3 scripts/convert.py          # 从 anywhere/*.arrs 生成 clash/*.yaml
-python3 scripts/convert.py --check  # 检查是否同步
+python3 scripts/build.py
 ```
 
-只编辑 `anywhere/*.arrs`。生成物由脚本和 CI 负责。
+分类定义在 [`categories.json`](categories.json)。构建时会拉取 Loyalsoldier / VPSDance / blackmatrix7 并与 `anywhere/*.arrs` 合并去重。

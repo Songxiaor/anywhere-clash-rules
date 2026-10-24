@@ -1,0 +1,173 @@
+{
+  "comment": "Clash 分流包。用户按顺序添加全部 9 条即可。Anywhere 的 .arrs 仍独立使用，不自动同步。",
+  "order": ["trae", "ai", "bytedance", "dev", "social", "stream", "reject", "direct", "proxy"],
+  "categories": [
+    {
+      "id": "trae",
+      "title": "TRAE",
+      "summary": "TRAE / TRAE SOLO 官方域名，建议绑日本节点",
+      "policy": "PROXY",
+      "group": "🤖 TRAE",
+      "icon": "chatgpt",
+      "sources": [{ "kind": "arrs", "file": "TRAE-Work-Japan-proxy.arrs" }]
+    },
+    {
+      "id": "ai",
+      "title": "海外 AI",
+      "summary": "Cursor / Claude / ChatGPT / Gemini / Grok / Copilot。不含 google.com、x.com 整站",
+      "policy": "PROXY",
+      "group": "🤖 AI服务",
+      "icon": "chatgpt",
+      "extras": [
+        "PROCESS-NAME,Cursor",
+        "PROCESS-NAME,Cursor Helper",
+        "PROCESS-NAME,Claude",
+        "PROCESS-NAME,Windsurf",
+        "PROCESS-NAME,ChatGPT"
+      ],
+      "sources": [
+        { "kind": "arrs", "file": "AI-luodi-proxy.arrs", "exclude": "ai-luodi-broad" },
+        { "kind": "arrs-url", "url": "https://raw.githubusercontent.com/chikacya/anywhere-rules/main/rules/common/AI.arrs" },
+        { "kind": "vpsdance", "id": "openai" },
+        { "kind": "vpsdance", "id": "anthropic" },
+        { "kind": "vpsdance", "id": "google-ai" },
+        { "kind": "vpsdance", "id": "cursor" },
+        { "kind": "vpsdance", "id": "copilot" },
+        { "kind": "vpsdance", "id": "x-ai" },
+        { "kind": "vpsdance", "id": "global" }
+      ]
+    },
+    {
+      "id": "bytedance",
+      "title": "抖音与字节",
+      "summary": "抖音 / 字节跳动，默认可走代理，策略组里可改直连",
+      "policy": "PROXY",
+      "group": "🎵 字节跳动",
+      "icon": "youtube",
+      "sources": [{ "kind": "arrs", "file": "Douyin-ByteDance-proxy.arrs" }]
+    },
+    {
+      "id": "dev",
+      "title": "开发者工具",
+      "summary": "GitHub / npm / PyPI / Hugging Face / Notion / Figma",
+      "policy": "PROXY",
+      "group": "🛠️ 开发者",
+      "icon": "link",
+      "sources": [{ "kind": "arrs", "file": "Overseas-Dev-Tools-proxy.arrs" }]
+    },
+    {
+      "id": "social",
+      "title": "通讯社交",
+      "summary": "Telegram / Discord / WhatsApp / X / Instagram / WebRTC STUN",
+      "policy": "PROXY",
+      "group": "💬 通讯社交",
+      "icon": "telegram",
+      "sources": [
+        { "kind": "arrs", "file": "Social-messaging-proxy.arrs" },
+        { "kind": "arrs", "file": "Telegram-force-proxy.arrs" },
+        { "kind": "arrs", "file": "WebRTC-STUN-domains.arrs" },
+        { "kind": "loyal", "id": "telegramcidr" }
+      ]
+    },
+    {
+      "id": "stream",
+      "title": "海外媒体",
+      "summary": "YouTube / Netflix / Disney+ / Spotify / TikTok 国际版",
+      "policy": "PROXY",
+      "group": "📺 流媒体",
+      "icon": "youtube",
+      "sources": [
+        { "kind": "blackmatrix7", "name": "YouTube" },
+        { "kind": "blackmatrix7", "name": "Netflix" },
+        { "kind": "blackmatrix7", "name": "Disney" },
+        { "kind": "blackmatrix7", "name": "Spotify" },
+        { "kind": "blackmatrix7", "name": "TikTok" }
+      ]
+    },
+    {
+      "id": "reject",
+      "title": "广告拦截",
+      "summary": "Loyalsoldier 广告与追踪域名",
+      "policy": "REJECT",
+      "group": "广告过滤",
+      "icon": "bug",
+      "sources": [{ "kind": "loyal", "id": "reject" }]
+    },
+    {
+      "id": "direct",
+      "title": "国内直连",
+      "summary": "国内 App、国内 AI、Apple 下载/iCloud、局域网与 CN IP",
+      "policy": "DIRECT",
+      "group": "全局直连",
+      "icon": "link",
+      "sources": [
+        { "kind": "arrs", "file": "China-App-direct.arrs" },
+        { "kind": "arrs", "file": "Apple-download-direct.arrs" },
+        { "kind": "arrs", "file": "Dedao-Brain-direct.arrs" },
+        { "kind": "arrs", "file": "Qianwen-IME-direct.arrs" },
+        { "kind": "vpsdance", "id": "cn" },
+        { "kind": "loyal", "id": "private" },
+        { "kind": "loyal", "id": "icloud" },
+        { "kind": "loyal", "id": "applications" },
+        { "kind": "loyal", "id": "direct" },
+        { "kind": "loyal", "id": "lancidr" },
+        { "kind": "loyal", "id": "cncidr" }
+      ]
+    },
+    {
+      "id": "proxy",
+      "title": "代理列表",
+      "summary": "GFW 与非 CN 后缀等剩余应走代理的域名",
+      "policy": "PROXY",
+      "group": "节点选择",
+      "icon": "adjust",
+      "sources": [
+        { "kind": "loyal", "id": "proxy" },
+        { "kind": "loyal", "id": "gfw" },
+        { "kind": "loyal", "id": "tld-not-cn" },
+        { "kind": "loyal", "id": "google" }
+      ]
+    }
+  ],
+  "exclude_sets": {
+    "ai-luodi-broad": [
+      "google.com",
+      "gmail.com",
+      "googlemail.com",
+      "googleapis.com",
+      "gstatic.com",
+      "googleusercontent.com",
+      "mail.google.com",
+      "imap.gmail.com",
+      "smtp.gmail.com",
+      "pop.gmail.com",
+      "x.com",
+      "twitter.com",
+      "twimg.com",
+      "t.co",
+      "telegram.org",
+      "telegram.me",
+      "telegram.dog",
+      "t.me",
+      "tdesktop.com",
+      "outlook.com",
+      "outlook.office.com",
+      "outlook.office365.com",
+      "hotmail.com",
+      "smtp.office365.com",
+      "imap-mail.outlook.com",
+      "smtp-mail.outlook.com",
+      "91.108.4.0/22",
+      "91.108.8.0/22",
+      "91.108.12.0/22",
+      "91.108.16.0/22",
+      "91.108.20.0/22",
+      "91.108.56.0/22",
+      "95.161.64.0/20",
+      "149.154.160.0/20",
+      "2001:67c:4e8::/48",
+      "2001:b28:f23d::/48",
+      "2001:b28:f23f::/48"
+    ]
+  }
+}
