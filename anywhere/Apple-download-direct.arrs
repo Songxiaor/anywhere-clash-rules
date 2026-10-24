@@ -1,0 +1,22 @@
+name = Apple下载直连
+routing = 1
+# Apple App Store download/update/CDN only.
+# Keep broad store, account, billing, and in-app purchase domains out of this set.
+# Also includes iCloud sync (photos / drive / CloudKit) so heavy sync traffic stays off proxy nodes.
+# Anywhere types: 0 IPv4 CIDR, 1 IPv6 CIDR, 2 Domain Suffix, 3 Domain Keyword
+
+2, mzstatic.com
+2, aaplimg.com
+2, cdn-apple.com
+2, appldnld.apple.com
+2, updates.cdn-apple.com
+2, updates-http.cdn-apple.com
+2, mesu.apple.com
+2, xp.apple.com
+2, gspe1-ssl.ls.apple.com
+2, pancake.apple.com
+
+# ===== iCloud 照片与同步 =====
+2, icloud.com
+2, icloud-content.com
+2, apple-cloudkit.com

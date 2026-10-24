@@ -1,0 +1,90 @@
+[
+  {
+    "stem": "AI-luodi-proxy",
+    "name": "AI落地-可迁移规则",
+    "policy": "PROXY",
+    "count": 120,
+    "anywhere": "https://raw.githubusercontent.com/Songxiaor/anywhere-clash-rules/main/anywhere/AI-luodi-proxy.arrs",
+    "clash": "https://raw.githubusercontent.com/Songxiaor/anywhere-clash-rules/main/clash/AI-luodi-proxy.yaml"
+  },
+  {
+    "stem": "Apple-download-direct",
+    "name": "Apple下载直连",
+    "policy": "DIRECT",
+    "count": 13,
+    "anywhere": "https://raw.githubusercontent.com/Songxiaor/anywhere-clash-rules/main/anywhere/Apple-download-direct.arrs",
+    "clash": "https://raw.githubusercontent.com/Songxiaor/anywhere-clash-rules/main/clash/Apple-download-direct.yaml"
+  },
+  {
+    "stem": "China-App-direct",
+    "name": "国内应用直连",
+    "policy": "DIRECT",
+    "count": 208,
+    "anywhere": "https://raw.githubusercontent.com/Songxiaor/anywhere-clash-rules/main/anywhere/China-App-direct.arrs",
+    "clash": "https://raw.githubusercontent.com/Songxiaor/anywhere-clash-rules/main/clash/China-App-direct.yaml"
+  },
+  {
+    "stem": "Dedao-Brain-direct",
+    "name": "得到大脑直连",
+    "policy": "DIRECT",
+    "count": 23,
+    "anywhere": "https://raw.githubusercontent.com/Songxiaor/anywhere-clash-rules/main/anywhere/Dedao-Brain-direct.arrs",
+    "clash": "https://raw.githubusercontent.com/Songxiaor/anywhere-clash-rules/main/clash/Dedao-Brain-direct.yaml"
+  },
+  {
+    "stem": "Douyin-ByteDance-proxy",
+    "name": "抖音及字节跳动代理",
+    "policy": "PROXY",
+    "count": 18,
+    "anywhere": "https://raw.githubusercontent.com/Songxiaor/anywhere-clash-rules/main/anywhere/Douyin-ByteDance-proxy.arrs",
+    "clash": "https://raw.githubusercontent.com/Songxiaor/anywhere-clash-rules/main/clash/Douyin-ByteDance-proxy.yaml"
+  },
+  {
+    "stem": "Overseas-Dev-Tools-proxy",
+    "name": "海外开发与工具",
+    "policy": "PROXY",
+    "count": 30,
+    "anywhere": "https://raw.githubusercontent.com/Songxiaor/anywhere-clash-rules/main/anywhere/Overseas-Dev-Tools-proxy.arrs",
+    "clash": "https://raw.githubusercontent.com/Songxiaor/anywhere-clash-rules/main/clash/Overseas-Dev-Tools-proxy.yaml"
+  },
+  {
+    "stem": "Qianwen-IME-direct",
+    "name": "千问输入法直连",
+    "policy": "DIRECT",
+    "count": 17,
+    "anywhere": "https://raw.githubusercontent.com/Songxiaor/anywhere-clash-rules/main/anywhere/Qianwen-IME-direct.arrs",
+    "clash": "https://raw.githubusercontent.com/Songxiaor/anywhere-clash-rules/main/clash/Qianwen-IME-direct.yaml"
+  },
+  {
+    "stem": "Social-messaging-proxy",
+    "name": "海外通讯社交",
+    "policy": "PROXY",
+    "count": 95,
+    "anywhere": "https://raw.githubusercontent.com/Songxiaor/anywhere-clash-rules/main/anywhere/Social-messaging-proxy.arrs",
+    "clash": "https://raw.githubusercontent.com/Songxiaor/anywhere-clash-rules/main/clash/Social-messaging-proxy.yaml"
+  },
+  {
+    "stem": "TRAE-Work-Japan-proxy",
+    "name": "TRAE",
+    "policy": "PROXY",
+    "count": 23,
+    "anywhere": "https://raw.githubusercontent.com/Songxiaor/anywhere-clash-rules/main/anywhere/TRAE-Work-Japan-proxy.arrs",
+    "clash": "https://raw.githubusercontent.com/Songxiaor/anywhere-clash-rules/main/clash/TRAE-Work-Japan-proxy.yaml"
+  },
+  {
+    "stem": "Telegram-force-proxy",
+    "name": "Telegram强制代理",
+    "policy": "PROXY",
+    "count": 26,
+    "anywhere": "https://raw.githubusercontent.com/Songxiaor/anywhere-clash-rules/main/anywhere/Telegram-force-proxy.arrs",
+    "clash": "https://raw.githubusercontent.com/Songxiaor/anywhere-clash-rules/main/clash/Telegram-force-proxy.yaml"
+  },
+  {
+    "stem": "WebRTC-STUN-domains",
+    "name": "WebRTC-STUN-可迁移域名",
+    "policy": "PROXY",
+    "count": 6,
+    "anywhere": "https://raw.githubusercontent.com/Songxiaor/anywhere-clash-rules/main/anywhere/WebRTC-STUN-domains.arrs",
+    "clash": "https://raw.githubusercontent.com/Songxiaor/anywhere-clash-rules/main/clash/WebRTC-STUN-domains.yaml"
+  }
+]

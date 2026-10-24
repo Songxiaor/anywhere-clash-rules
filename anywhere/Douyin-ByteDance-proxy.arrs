@@ -1,0 +1,23 @@
+name = 抖音及字节跳动代理
+routing = 0
+# Douyin and ByteDance domains for proxy routing.
+# Anywhere types: 0 IPv4 CIDR, 1 IPv6 CIDR, 2 Domain Suffix, 3 Domain Keyword
+
+3, zjcdn.com
+2, snssdk.com
+2, amemv.com
+2, iesdouyin.com
+2, zijieapi.com
+3, douyin
+2, byteimg.com
+2, bytedance.com
+2, bytedance.net
+2, bytedns.net
+2, pstatp.com
+2, douyinpic.com
+2, douyinvod.com
+2, douyinstatic.com
+2, volces.com
+2, volcvideo.com
+2, toutiaoimg.com
+2, toutiaoimg.cn

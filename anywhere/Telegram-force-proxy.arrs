@@ -1,0 +1,32 @@
+name = Telegram强制代理
+routing = 0
+# Force Telegram raw IP and domain traffic to a proxy route in Anywhere.
+# Set this rule set route to 安大略 Vless after importing.
+# Anywhere types: 0 IPv4 CIDR, 1 IPv6 CIDR, 2 Domain Suffix, 3 Domain Keyword
+
+0, 149.154.167.151/32
+0, 149.154.171.5/32
+0, 91.108.56.169/32
+0, 149.154.160.0/20
+0, 91.108.4.0/22
+0, 91.108.8.0/22
+0, 91.108.12.0/22
+0, 91.108.16.0/22
+0, 91.108.20.0/22
+0, 91.108.56.0/22
+0, 91.105.192.0/23
+0, 95.161.64.0/20
+1, 2001:67c:4e8::/48
+1, 2001:b28:f23d::/48
+1, 2001:b28:f23f::/48
+2, telegram.org
+2, telegram.me
+2, telegram.dog
+2, t.me
+2, tdesktop.com
+2, telegra.ph
+2, graph.org
+2, comments.app
+2, fragment.com
+2, telesco.pe
+3, telegram

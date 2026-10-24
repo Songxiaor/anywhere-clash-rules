@@ -1,0 +1,36 @@
+name = 得到大脑直连
+routing = 1
+# Dedao / 得到大脑 web & app first-party hosts.
+# Root cause: umiwi CDN was egressing via overseas VPN (LAX edge), making
+# native/brain SPA hang while loading large JS/CSS bundles.
+# Set this rule set route to 直连 in Anywhere after import/refresh.
+# Anywhere types: 0 IPv4 CIDR, 1 IPv6 CIDR, 2 Domain Suffix, 3 Domain Keyword
+
+# Core product domains
+2, dedao.cn
+2, igetget.com
+2, umiwi.com
+2, luojilab.com
+
+# Explicit CDN / static hosts commonly used by 得到大脑 web
+2, imgcdn.umiwi.com
+2, imgcdn-1.umiwi.com
+2, piccdn2.umiwi.com
+2, piccdn3.umiwi.com
+2, staticcdn.umiwi.com
+2, staticcdn.igetget.com
+
+# API / gateway hosts observed by brain page
+2, entree.igetget.com
+2, m.igetget.com
+2, www.igetget.com
+2, www.dedao.cn
+2, api.igetget.com
+2, gateways.igetget.com
+2, blitz.igetget.com
+2, doctor.igetget.com
+2, search.igetget.com
+2, ws.igetget.com
+2, fd.igetget.com
+2, qy.igetget.com
+2, zt.igetget.com

@@ -1,0 +1,48 @@
+name = 海外开发与工具
+routing = 0
+# Overseas dev / AI tools / productivity services for proxy routing.
+# Source: Anywhere request log sampling + live path tests (2026-10-04).
+# These previously only reached proxy via the 默认 fallback; listed here so they
+# keep working even if the default route changes.
+# Route this rule set to your proxy node in Anywhere after adding it.
+# Anywhere types: 0 IPv4 CIDR, 1 IPv6 CIDR, 2 Domain Suffix, 3 Domain Keyword
+
+# ===== GitHub =====
+2, github.com
+2, githubusercontent.com
+2, githubassets.com
+
+# ===== 包管理与模型仓库 =====
+2, npmjs.org
+2, npmjs.com
+2, pypi.org
+2, pythonhosted.org
+2, huggingface.co
+
+# ===== AI 编程与 Agent 工具 =====
+2, onorca.dev
+2, kiro.dev
+2, opencode.ai
+2, usemagpie.ai
+2, zenmux.ai
+2, kilo.ai
+2, venice.ai
+2, commandcode.ai
+2, typesafe.ai
+2, charm.land
+2, stencil.so
+2, manus.im
+2, minimax.io
+
+# ===== 效率与办公 =====
+2, notion.so
+2, figma.com
+2, proton.me
+2, dropbox.com
+2, obsidian.md
+2, immersivetranslate.com
+2, trancy.org
+
+# ===== 统计与基础设施 =====
+2, posthog.com
+2, workers.dev

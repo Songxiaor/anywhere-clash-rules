@@ -1,0 +1,294 @@
+name = 国内应用直连
+routing = 1
+# Unified DIRECT ruleset for China-first apps on this Mac.
+# Source: local app inventory + live path tests (2026-08-04).
+# Problem pattern: overseas VPN egress makes CN CDN/API slow or timeout
+# (e.g. umiwi -> LAX, voice-input.qianwen.com -> us34).
+#
+# Included (installed / actively used on this machine):
+#   - 得到大脑 Dedao
+#   - 千问输入法 Qianwen IME
+#   - 微信 WeChat
+#   - 飞书 Feishu (CN)
+#   - 百度网盘 Baidu Netdisk
+#   - WPS / 金山文档
+#   - 幕布 Mubu
+#   - 网易 UU 远程
+#   - 星橙知道 直播回放 (xcknow)
+#   - 星橙知道 直播间 (qianyanwy) + 腾讯云直播 CDN (2026-10-05)
+#   - 国内 AI 应用：豆包 / Kimi / DeepSeek / MiniMax(国内版)
+#
+# Intentionally NOT included (need proxy / overseas):
+#   - ChatGPT / Claude / Grok / OpenAI / Anthropic / xAI
+#   - Telegram / X / Google / YouTube
+#   - Lark international (larksuite.com overseas tenants)
+#   - Cursor / Codex / ego overseas AI backends
+#
+# Set this rule set route to 直连 in Anywhere after refresh.
+# Anywhere types: 0 IPv4 CIDR, 1 IPv6 CIDR, 2 Domain Suffix, 3 Domain Keyword
+
+# ===== 得到大脑 / Dedao =====
+2, dedao.cn
+2, igetget.com
+2, umiwi.com
+2, luojilab.com
+2, imgcdn.umiwi.com
+2, imgcdn-1.umiwi.com
+2, piccdn2.umiwi.com
+2, piccdn3.umiwi.com
+2, staticcdn.umiwi.com
+2, staticcdn.igetget.com
+2, entree.igetget.com
+2, m.igetget.com
+2, api.igetget.com
+2, gateways.igetget.com
+2, blitz.igetget.com
+2, doctor.igetget.com
+2, search.igetget.com
+2, ws.igetget.com
+2, fd.igetget.com
+2, qy.igetget.com
+2, zt.igetget.com
+
+# ===== 千问输入法 / Qianwen IME =====
+2, qianwen.com
+2, voice-input.qianwen.com
+2, ime.qianwen.com
+2, pc-unet.qianwen.com
+2, puds.qianwen.com
+2, cs-center.qianwen.com
+2, hp-cms.qianwen.com
+2, open-cms-pc.qianwen.com
+2, alicdn.com
+2, nsx.uc.cn
+2, uc.cn
+2, dingtalk.com
+2, alibaba.com
+
+# ===== 微信 WeChat / 腾讯 =====
+2, weixin.qq.com
+2, wechat.com
+2, servicewechat.com
+2, qpic.cn
+2, qlogo.cn
+2, gtimg.cn
+2, idqqimg.com
+2, tenpay.com
+2, wx.qq.com
+2, res.wx.qq.com
+2, finder.video.qq.com
+# keep broad QQ/Tencent CN traffic off overseas nodes
+2, qq.com
+2, tencent.com
+2, tencent-cloud.com
+2, myqcloud.com
+2, vod-qcloud.com
+
+# ===== 飞书 Feishu (CN only) =====
+2, feishu.cn
+2, feishucdn.com
+2, feishu.net
+2, larkoffice.com
+2, bitable.cn
+2, bytegoofy.com
+# CN Feishu CDN / static often on these
+2, lf3-cdn-tos.bytegoofy.com
+2, lf-package-cn.feishucdn.com
+# NOTE: do NOT force larksuite.com / byteoversea.com DIRECT
+
+# ===== 百度网盘 / Baidu =====
+2, baidu.com
+2, baidubce.com
+2, baidupcs.com
+2, bcebos.com
+2, bdstatic.com
+2, bdimg.com
+2, dwstatic.com
+2, pan.baidu.com
+2, pcs.baidu.com
+2, d.pcs.baidu.com
+2, ndstatic.cdn.bcebos.com
+2, nd-static.bdstatic.com
+
+# ===== WPS / 金山文档 =====
+2, wps.cn
+2, wpscdn.cn
+2, kdocs.cn
+2, kingsoft.com
+2, ksosoft.com
+2, wps.com
+
+# ===== 幕布 Mubu =====
+2, mubu.com
+2, api2.mubu.com
+2, assets.mubu.com
+2, document-image.mubu.com
+
+# ===== 网易 UU 远程 / 163 =====
+2, 163.com
+2, 126.net
+2, netease.com
+2, nie.163.com
+2, uuyc.163.com
+2, api.nrd.nie.163.com
+2, adl.netease.com
+
+# ===== 星橙知道 直播回放 / xcknow =====
+2, xcknow.cn
+2, whxcknow.com
+2, xingchengzhidao.com
+2, yuntaitec.com
+2, qianyanwy.com.cn
+
+# ===== 腾讯云直播 / 快直播（实测被默认规则送去代理，直播转圈；2026-10-05）=====
+2, tlivesource.com
+2, tliveplay.com
+2, tlivecdn.com
+
+# ===== 国内 AI 应用（海外 DNS 会解析到海外节点，需显式直连）=====
+2, doubao.com
+2, kimi.com
+2, deepseek.com
+2, minimaxi.com
+
+# =====================================================================
+# 2026-10-11 追加：Mac 实证(A) + iOS/通用常用(B) + 银行 + 腾讯系补充
+# 说明：字节系/抖音、TRAE 已在各自 proxy 规则集中单独安排，此处不重复、不冲突
+# 来源：A 段为本机 App 清单实证；B 段与银行为通用常识(未经本机实测)
+# 加完请在 Anywhere 点「更新」，并确认本规则集 route = 直连
+# =====================================================================
+
+# ===== 哔哩哔哩 Bilibili（本机已装，原规则零覆盖）=====
+2, bilibili.com
+2, b23.tv
+2, hdslb.com
+2, bilivideo.com
+2, biliapi.net
+
+# ===== 夸克 Quark（本机已装）=====
+2, quark.cn
+2, myquark.cn
+2, sm.cn
+
+# ===== 萤石云 EZVIZ（本机已装；直播走 P2P，域名仅覆盖登录/云存储）=====
+2, ys7.com
+2, ezviz.com
+2, ezvizlife.com
+
+# ===== 阿里系 =====
+2, taobao.com
+2, tmall.com
+2, taobaocdn.com
+2, tbcdn.cn
+2, alipay.com
+2, alipayobjects.com
+2, alipcdn.com
+2, aliyuncs.com
+2, goofish.com
+2, amap.com
+2, autonavi.com
+2, aliyundrive.com
+2, alipan.com
+2, youku.com
+2, ykimg.com
+2, yuque.com
+
+# ===== 电商 / 支付 =====
+2, jd.com
+2, 360buyimg.com
+2, jdcdn.com
+2, yangkeduo.com
+2, pinduoduo.com
+2, pddpic.com
+2, dewu.com
+2, vip.com
+
+# ===== 出行 / 政务 =====
+2, 12306.cn
+2, didichuxing.com
+2, ctrip.com
+2, qunar.com
+
+# ===== 生活服务 =====
+2, meituan.com
+2, meituan.net
+2, dianping.com
+2, ele.me
+2, elemecdn.com
+2, freshhema.com
+
+# ===== 社交 / 内容社区 =====
+2, xiaohongshu.com
+2, xhscdn.com
+2, weibo.com
+2, weibo.cn
+2, sinaimg.cn
+2, sina.com.cn
+2, zhihu.com
+2, zhimg.com
+2, douban.com
+2, doubanio.com
+
+# ===== 视频 / 音频 =====
+2, iqiyi.com
+2, iqiyipic.com
+2, mgtv.com
+2, ximalaya.com
+2, kugou.com
+2, kuwo.cn
+2, xiaoyuzhoufm.com
+
+# ===== 智能家居（与萤石同类）=====
+2, mi.com
+2, mi-img.com
+2, mifile.cn
+
+# ===== 国内 AI =====
+2, chatglm.cn
+2, zhipuai.cn
+
+# ===== 银行 =====
+2, icbc.com.cn
+2, abchina.com
+2, boc.cn
+2, ccb.com
+2, bankcomm.com
+2, psbc.com
+2, cmbchina.com
+2, citicbank.com
+2, ecitic.com
+2, spdb.com.cn
+2, cmbc.com.cn
+2, cib.com.cn
+2, cebbank.com
+2, cgbchina.com.cn
+2, hxb.com.cn
+2, pingan.com
+2, bankofbeijing.com.cn
+2, bankofshanghai.com
+2, nbcb.com.cn
+2, webank.com
+2, mybank.cn
+2, unionpay.com
+2, unionpayintl.com
+2, 95516.com
+2, 10jqka.com.cn
+2, eastmoney.com
+2, xueqiu.com
+
+# ===== 腾讯系 补充（wxaurl.cn / qqopenapp.com 为跨平台关键）=====
+2, qcloud.com
+2, tencentcloudapi.com
+2, qcloudimg.com
+2, weixin.com
+2, wxaurl.cn
+2, url.cn
+2, weiyun.com
+2, foxmail.com
+2, qidian.com
+2, yuewen.com
+2, readnovel.com
+2, tencentgames.com
+2, qqopenapp.com
+2, wegame.com
+2, tencentmusic.com

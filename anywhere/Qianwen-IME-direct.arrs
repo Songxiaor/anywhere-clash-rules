@@ -1,0 +1,32 @@
+name = 千问输入法直连
+routing = 1
+# Qianwen IME (千问输入法) first-party hosts for voice input and online features.
+# Evidence 2026-08-04:
+# - voice-input.qianwen.com Via: ens-cache18.us34 (US west edge), TLS ~1.0s+
+# - ime.qianwen.com TLS ~1.8s, total ~3.2s under current VPN path
+# - pc-unet.qianwen.com / puds.qianwen.com / open-cms-pc.qianwen.com timeout via proxy
+# Keep this rule set on 直连 in Anywhere after import/refresh.
+# Anywhere types: 0 IPv4 CIDR, 1 IPv6 CIDR, 2 Domain Suffix, 3 Domain Keyword
+
+# Core product / voice / CMS
+2, qianwen.com
+2, voice-input.qianwen.com
+2, ime.qianwen.com
+2, pc-unet.qianwen.com
+2, puds.qianwen.com
+2, cs-center.qianwen.com
+2, www.qianwen.com
+2, hp-cms.qianwen.com
+2, open-cms-pc.qianwen.com
+
+# Related Alibaba edge hosts referenced by the IME binary
+2, alicdn.com
+2, terms.alicdn.com
+2, nsx.uc.cn
+2, uc.cn
+
+# Optional login/account related (domestic; safe as DIRECT)
+2, qr.dingtalk.com
+2, dingtalk.com
+2, service.alibaba.com
+2, alibaba.com

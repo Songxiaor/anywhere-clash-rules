@@ -1,0 +1,29 @@
+# Generated from anywhere/TRAE-Work-Japan-proxy.arrs — DO NOT EDIT
+# Anywhere name: TRAE
+# Suggested policy: PROXY
+# Rules: 23
+# Clash Verge: rule-providers behavior: classical, format: yaml
+payload:
+  - "DOMAIN-SUFFIX,trae.ai"
+  - "DOMAIN-SUFFIX,traeapi.us"
+  - "DOMAIN-SUFFIX,traecdn.us"
+  - "DOMAIN-SUFFIX,traecontent.com"
+  - "DOMAIN-SUFFIX,trae.com"
+  - "DOMAIN-SUFFIX,traeai.us"
+  - "DOMAIN-SUFFIX,solo-deeplink.ai"
+  - "DOMAIN-SUFFIX,icube-api-sg.tiktok-row.net"
+  - "DOMAIN-SUFFIX,ide-market-us.tiktok-row.net"
+  - "DOMAIN-SUFFIX,ide-us.tiktok-row.net"
+  - "DOMAIN-SUFFIX,p-icube-feecback-oversea-sg.tiktok-row.net"
+  - "DOMAIN-SUFFIX,solo-web.tiktok-row.net"
+  - "DOMAIN-SUFFIX,copilot-sg-og.byteintl.net"
+  - "DOMAIN-SUFFIX,copilot-og.byteintl.net"
+  - "DOMAIN-SUFFIX,copilot-sg.byteintl.net"
+  - "DOMAIN-SUFFIX,copilot.byteintl.net"
+  - "DOMAIN-SUFFIX,copilot-cn.bytedance.net"
+  - "DOMAIN-SUFFIX,icube-api.bytedance.net"
+  - "DOMAIN-SUFFIX,ide-market.bytedance.net"
+  - "DOMAIN-SUFFIX,cdn-tos.bytedance.net"
+  - "DOMAIN-SUFFIX,tosv.tiktokd.org"
+  - "DOMAIN-SUFFIX,voice.ap-southeast-1.bytepluses.com"
+  - "DOMAIN-SUFFIX,p16-market-sg.ibyteimg.com"

@@ -1,0 +1,23 @@
+# Generated from anywhere/Qianwen-IME-direct.arrs — DO NOT EDIT
+# Anywhere name: 千问输入法直连
+# Suggested policy: DIRECT
+# Rules: 17
+# Clash Verge: rule-providers behavior: classical, format: yaml
+payload:
+  - "DOMAIN-SUFFIX,qianwen.com"
+  - "DOMAIN-SUFFIX,voice-input.qianwen.com"
+  - "DOMAIN-SUFFIX,ime.qianwen.com"
+  - "DOMAIN-SUFFIX,pc-unet.qianwen.com"
+  - "DOMAIN-SUFFIX,puds.qianwen.com"
+  - "DOMAIN-SUFFIX,cs-center.qianwen.com"
+  - "DOMAIN-SUFFIX,www.qianwen.com"
+  - "DOMAIN-SUFFIX,hp-cms.qianwen.com"
+  - "DOMAIN-SUFFIX,open-cms-pc.qianwen.com"
+  - "DOMAIN-SUFFIX,alicdn.com"
+  - "DOMAIN-SUFFIX,terms.alicdn.com"
+  - "DOMAIN-SUFFIX,nsx.uc.cn"
+  - "DOMAIN-SUFFIX,uc.cn"
+  - "DOMAIN-SUFFIX,qr.dingtalk.com"
+  - "DOMAIN-SUFFIX,dingtalk.com"
+  - "DOMAIN-SUFFIX,service.alibaba.com"
+  - "DOMAIN-SUFFIX,alibaba.com"

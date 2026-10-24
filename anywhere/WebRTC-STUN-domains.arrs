@@ -1,0 +1,12 @@
+name = WebRTC-STUN-可迁移域名
+routing = 0
+# Generated from Clash Party override Merged-All / 19e12173934.yaml
+# Anywhere types: 0 IPv4 CIDR, 1 IPv6 CIDR, 2 Domain Suffix, 3 Domain Keyword
+# Note: Clash DOMAIN rules are approximated as Domain Suffix because Anywhere has no exact-domain type.
+
+2, stun.l.google.com
+2, stun1.l.google.com
+2, stun2.l.google.com
+2, stun3.l.google.com
+2, stun4.l.google.com
+2, stun.cloudflare.com

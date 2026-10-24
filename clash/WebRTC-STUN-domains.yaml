@@ -1,0 +1,12 @@
+# Generated from anywhere/WebRTC-STUN-domains.arrs — DO NOT EDIT
+# Anywhere name: WebRTC-STUN-可迁移域名
+# Suggested policy: PROXY
+# Rules: 6
+# Clash Verge: rule-providers behavior: classical, format: yaml
+payload:
+  - "DOMAIN-SUFFIX,stun.l.google.com"
+  - "DOMAIN-SUFFIX,stun1.l.google.com"
+  - "DOMAIN-SUFFIX,stun2.l.google.com"
+  - "DOMAIN-SUFFIX,stun3.l.google.com"
+  - "DOMAIN-SUFFIX,stun4.l.google.com"
+  - "DOMAIN-SUFFIX,stun.cloudflare.com"
