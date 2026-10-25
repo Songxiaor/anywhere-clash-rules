@@ -1,0 +1,22 @@
+name = 测速 speed.skk.moe
+routing = 0
+# 给这条规则集在 Anywhere「路由」里选一个节点，再打开 https://speed.skk.moe/ 测速，
+# 页面、下载、上传都会走同一个节点。换节点再测一次，就是下一个节点的成绩。
+# 只加 speed.skk.moe 不够：测速流量其实跑在下面这些域名上。
+# Anywhere types: 0 IPv4 CIDR, 1 IPv6 CIDR, 2 Domain Suffix, 3 Domain Keyword
+
+# 页面、图标
+2, speed.skk.moe
+2, cdn.skk.moe
+
+# Global 区域的延迟与下载：jsdelivr 的五个镜像（cdn / fastly / testingcf / gcore / originfastly）
+# 注意：jsdelivr.net 是公共 CDN，选中节点期间其他网页的 jsdelivr 资源也会走这个节点
+2, jsdelivr.net
+
+# Global 区域的上传
+2, speed.cloudflare.com
+
+# Mainland China 区域的延迟与下载（该区域不测上传）
+2, p6-juejin.byteimg.com
+2, act-webstatic.mihoyo.com
+2, www-file.huawei.com
