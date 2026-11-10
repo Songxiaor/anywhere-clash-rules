@@ -1,0 +1,11 @@
+name = Cloudflare隧道直连
+routing = 1
+# cloudflared (Cloudflare Tunnel) edge connections go direct.
+# Problem: under Anywhere TUN the edge address resolves to 198.18.x.x and the TLS handshake
+# is dropped ("TLS handshake with edge error: EOF"), so the tunnel never registers.
+# Used for reaching OpenMausBot from a phone through maus.songyichen.ccwu.cc.
+# Anywhere types: 0 IPv4 CIDR, 1 IPv6 CIDR, 2 Domain Suffix, 3 Domain Keyword
+
+2, argotunnel.com
+2, cloudflare.com
+2, trycloudflare.com
