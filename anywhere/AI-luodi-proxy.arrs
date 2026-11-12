@@ -126,3 +126,41 @@ routing = 0
 2, cursor.com
 2, cursorapi.com
 2, cursor-cdn.com
+
+# 2026-11-13 Claude 防封补全：对照 Anthropic 官方 network-config / IP 文档与 VPSDance、MetaCubeX、v2fly、blackmatrix7、chikacya、Loyalsoldier、ACL4SSR 核查后的遗漏
+# 注：storage.googleapis.com / accounts.google.com / fonts.googleapis.com / fonts.gstatic.com 已被本文件现有的 googleapis.com / google.com / gstatic.com 后缀规则覆盖，不用重复加
+# Claude Code 安装/更新/插件
+2, registry.npmjs.org
+2, github.com
+2, raw.githubusercontent.com
+2, api.github.com
+2, objects.githubusercontent.com
+2, formulae.brew.sh
+# Anthropic 内部 / staging 域名
+2, ant.dev
+2, antspace.dev
+# MCP 官网其余后缀（.io 已有）
+2, modelcontextprotocol.com
+2, modelcontextprotocol.net
+2, modelcontextprotocol.org
+# Apple 登录（只用邮箱登录可不加）
+2, appleid.apple.com
+# Artifact 字体与 JS 库（仅查看 artifact 时触发）
+2, cdnjs.cloudflare.com
+2, cdn.jsdelivr.net
+2, cdn.tailwindcss.com
+2, code.jquery.com
+2, unpkg.com
+# Claude Code VS Code 扩展
+2, marketplace.visualstudio.com
+2, open-vsx.org
+# Anthropic 第二段官方 IP（第一段 160.79.104.0/21 已有）
+0, 153.61.224.0/22
+0, 153.61.208.0/20
+# 以下 6 条来源不明（仅见于 VPSDance 手动列表，无官方佐证），域名冷门、加上无害；介意可删
+2, interface.feedback
+2, lcicat.org
+2, lcicollections.org
+2, mcpservertest.online
+2, muthos.com
+2, sillylittleguy.org
