@@ -37,6 +37,7 @@ routing = 0
 2, statsigapi.net
 2, segment.io
 2, browser-intake-us5-datadoghq.com
+2, http-intake.logs.us5.datadoghq.com
 3, datadog
 3, sentry
 3, sift
