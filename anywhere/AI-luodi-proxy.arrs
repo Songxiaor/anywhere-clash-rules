@@ -214,3 +214,6 @@ routing = 0
 2, account.microsoft.com
 2, intercomassets.com
 2, nel.cloudflare.com
+
+# 2026-11-21 ChatGPT 结算 Apple Pay 二维码流程
+2, pay.apple.com
