@@ -205,3 +205,12 @@ routing = 0
 0, 64.23.132.171/32
 1, 2604:f20::/32
 2, vscode-cdn.net
+
+# 2026-11-21 对照 AI-Guard 补充：微软账号登录、Intercom 资源域、Cloudflare NEL 上报
+2, login.microsoftonline.com
+2, login.live.com
+2, signup.live.com
+2, account.live.com
+2, account.microsoft.com
+2, intercomassets.com
+2, nel.cloudflare.com
