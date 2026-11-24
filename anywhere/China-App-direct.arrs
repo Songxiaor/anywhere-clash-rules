@@ -17,6 +17,7 @@ routing = 1
 #   - 星橙知道 直播回放 (xcknow)
 #   - 星橙知道 直播间 (qianyanwy) + 腾讯云直播 CDN (2026-10-05)
 #   - 国内 AI 应用：豆包 / Kimi / DeepSeek / MiniMax(国内版)
+#   - AIHOT 资讯接口（aihot.news，国内腾讯 EdgeOne CDN，2026-11-24）
 #
 # Intentionally NOT included (need proxy / overseas):
 #   - ChatGPT / Claude / Grok / OpenAI / Anthropic / xAI
@@ -49,6 +50,10 @@ routing = 1
 2, fd.igetget.com
 2, qy.igetget.com
 2, zt.igetget.com
+# 得到大脑 2.3.0 新接口域名（notes-api/yoda-sse 属 biji.com；知识库/团队知识库属 trytalks.com）
+# 此前 trytalks.com 走默认代理（海外节点），握手 1-2s 并偶发超时；直连 0.1s。
+2, biji.com
+2, trytalks.com
 
 # ===== 千问输入法 / Qianwen IME =====
 2, qianwen.com
@@ -150,6 +155,29 @@ routing = 1
 2, kimi.com
 2, deepseek.com
 2, minimaxi.com
+# AIHOT（国内备案 + 腾讯 EdgeOne CDN；走代理绕海外 1.3-2.2s 且偶发 522，直连 0.1s；2026-11-24）
+2, aihot.news
+
+# ===== 豆包输入法 Doubao IME（2026-11-07）=====
+# 现象：语音键盘提示「网络不佳 已使用离线识别服务」。
+# 域名取自 Mac 版 DoubaoIme.app 二进制（iOS 版未抓包验证）。
+# doubao.com 已直连；下面这些在 Douyin-ByteDance-proxy 里被整段送去代理，
+# 用更具体的域名压过它（Anywhere 按具体程度匹配，不按列表顺序）。
+2, speech.bytedance.com
+2, is.snssdk.com
+2, crash.snssdk.com
+2, effect.snssdk.com
+2, tnc0-aliec2.zijieapi.com
+2, tnc0-alisc1.zijieapi.com
+2, tnc0-bjlgy.zijieapi.com
+2, tnc3-aliec2.zijieapi.com
+2, tnc3-alisc1.zijieapi.com
+2, tnc3-bjlgy.zijieapi.com
+2, pc-mon.zijieapi.com
+2, p0-ime-clip-private.byteimg.com
+2, p0-ime-clip2-private.byteimg.com
+2, oceancloudapi.com
+2, bytedanceapi.com
 
 # =====================================================================
 # 2026-10-11 追加：Mac 实证(A) + iOS/通用常用(B) + 银行 + 腾讯系补充

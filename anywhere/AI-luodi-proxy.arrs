@@ -217,3 +217,10 @@ routing = 0
 
 # 2026-11-21 ChatGPT 结算 Apple Pay 二维码流程
 2, pay.apple.com
+
+# 2026-11-24 补充 AI 通用登录认证与 Cloudflare Turnstile 人机校验域
+2, workos.com
+2, workoscdn.com
+2, clerk.com
+2, clerk.accounts.dev
+2, turnstile.cloudflare.com
