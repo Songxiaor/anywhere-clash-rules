@@ -224,3 +224,12 @@ routing = 0
 2, clerk.com
 2, clerk.accounts.dev
 2, turnstile.cloudflare.com
+
+# 2026-11-24 对照 OpenAI 官方网络白名单补齐防漏域与新产品域
+2, arkoselabs.com
+2, featureassets.org
+2, prodregistryv2.org
+2, workos.imgix.net
+2, chatgpt.site
+2, humb.apple.com
+2, segment.com
