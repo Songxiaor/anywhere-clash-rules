@@ -234,3 +234,7 @@ routing = 0
 2, humb.apple.com
 2, segment.com
 3, antigravity
+
+# 2026-11-26 Claude 依赖域名补充
+2, frompersona.com
+2, googlesource.com
