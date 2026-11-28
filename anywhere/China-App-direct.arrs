@@ -320,3 +320,35 @@ routing = 1
 2, qqopenapp.com
 2, wegame.com
 2, tencentmusic.com
+
+# ===== 国内抖音 / 字节跳动（2026-11-28 并入；仅限国内版，绝不含 TikTok / byteoversea / ibytedtos / ibyteimg / larksuite）=====
+2, douyin.com
+3, douyin
+2, iesdouyin.com
+2, douyinpic.com
+2, douyinvod.com
+2, douyinstatic.com
+2, amemv.com
+2, snssdk.com
+2, zijieapi.com
+2, zjcdn.com
+2, bytedance.com
+2, bytedance.net
+2, bytedns.net
+2, byteimg.com
+2, bytecdn.cn
+2, byted-static.com
+2, bytetos.com
+2, pstatp.com
+2, volces.com
+2, volcvideo.com
+2, volcengine.com
+2, toutiao.com
+2, toutiaoimg.com
+2, toutiaoimg.cn
+2, toutiaocdn.com
+2, toutiaostatic.com
+2, ixigua.com
+2, jianying.com
+2, capcut.cn
+
