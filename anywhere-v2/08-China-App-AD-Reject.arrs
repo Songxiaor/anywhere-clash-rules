@@ -5,6 +5,7 @@ routing = 2
 # Anywhere types: 0 IPv4 CIDR, 1 IPv6 CIDR, 2 Domain Suffix, 3 Domain Keyword
 
 # ===== 腾讯优量汇 / 广点通 SDK =====
+2, e.qq.com
 2, gdt.qq.com
 2, adsmind.gdtimg.com
 2, adsmind.ugdtimg.com
@@ -82,6 +83,17 @@ routing = 2
 2, advlion.com
 2, 51y5.net
 2, adintl.cn
+2, mergex.cn
+2, adukwai.com
+2, mentamob.com
+2, ubixioe.com
+2, massx.com
+2, leadmoad.com
+2, 1rtb.net
+2, 1rtb.com
+2, zhangyuyidong.cn
+2, yunxish.com
+0, 180.76.76.200/32
 2, beizi.biz
 2, sigmob.cn
 2, anythinktech.com
