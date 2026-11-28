@@ -1,0 +1,154 @@
+name = AI落地-纯净家宽
+routing = 0
+# 仅保留高风控核心账号资产：全套海外 AI + Google/Gemini + X(Twitter)运营 + 支付与人机校验
+# 已剥离：Telegram(移交海外通讯社交)、GitHub/npm/brew(移交海外开发与工具)、IP检测(移交IP纯净度检测)、高危宽泛关键词与公共CDN
+# Anywhere types: 0 IPv4 CIDR, 1 IPv6 CIDR, 2 Domain Suffix, 3 Domain Keyword
+
+# ===== Anthropic / Claude =====
+2, anthropic.com
+2, anthropic-ai.com
+2, anthropic.services
+2, anthropic-com.ghost.io
+2, anthropic.com.cdn.cloudflare.net
+2, servd-anthropic-website.b-cdn.net
+2, claude.ai
+2, claude.com
+2, clau.de
+2, claudemcpclient.com
+2, claudemcpcontent.com
+2, claudeusercontent.com
+2, modelcontextprotocol.io
+2, modelcontextprotocol.com
+2, modelcontextprotocol.net
+2, modelcontextprotocol.org
+2, ant.dev
+2, antspace.dev
+3, anthropic
+3, claude
+0, 160.79.104.0/21
+0, 153.61.224.0/22
+0, 153.61.208.0/20
+1, 2607:6bc0::/32
+
+# ===== OpenAI / ChatGPT / Sora =====
+2, openai.com
+2, openai.org
+2, openaiapi-site.azureedge.net
+2, openaicom.imgix.net
+2, openaicomproductionae4b.blob.core.windows.net
+2, production-openaicom-storage.azureedge.net
+2, openaiassets.blob.core.windows.net
+2, openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net
+2, openai.com.cdn.cloudflare.net
+2, chat.openai.com.cdn.cloudflare.net
+2, chatgpt.com
+2, chatgpt.site
+2, chatgpt.livekit.cloud
+2, host.livekit.cloud
+2, turn.livekit.cloud
+2, oaistatic.com
+2, oaiusercontent.com
+2, oaistatsig.com
+2, sora.com
+2, ai.com
+2, chat.com
+3, openai
+3, chatgpt-async-webps-prod
+
+# ===== Google / Gemini / Antigravity / Gmail（YouTube 已在内置规则单独分流）=====
+2, google.com
+2, googleapis.com
+2, gstatic.com
+2, googleusercontent.com
+2, ggpht.com
+2, withgoogle.com
+2, googlesource.com
+2, gmail.com
+2, googlemail.com
+2, ai.google.dev
+2, ai.studio
+2, antigravity.google
+2, antigravity-unleash.goog
+2, deepmind.google
+2, deepmind.com
+2, flow.google
+2, gemini.google
+3, antigravity
+
+# ===== X (Twitter) 运营与 Grok =====
+2, x.com
+2, twitter.com
+2, twimg.com
+2, t.co
+2, twttr.com
+2, tweetdeck.com
+2, twitteroauth.com
+2, x.ai
+2, grok.com
+2, grokipedia.com
+
+# ===== Cursor / GitHub Copilot / 微软登录 =====
+2, cursor.sh
+2, cursor.com
+2, cursorapi.com
+2, cursor-cdn.com
+2, cursorvm.com
+2, githubcopilot.com
+2, copilot.microsoft.com
+2, copilot-proxy.githubusercontent.com
+2, copilot-workspace.githubnext.com
+2, outlook.com
+2, outlook.office.com
+2, outlook.office365.com
+2, smtp.office365.com
+2, hotmail.com
+2, login.microsoftonline.com
+2, login.live.com
+2, signup.live.com
+2, account.live.com
+2, account.microsoft.com
+
+# ===== 认证 / 支付 / 人机校验 / AI 依赖基础设施 =====
+2, challenges.cloudflare.com
+2, turnstile.cloudflare.com
+2, nel.cloudflare.com
+2, static.cloudflareinsights.com
+2, hcaptcha.com
+2, recaptcha.net
+2, arkoselabs.com
+2, auth0.com
+2, workos.com
+2, workoscdn.com
+2, workos.imgix.net
+2, clerk.com
+2, clerk.accounts.dev
+2, stripe.com
+2, stripe.network
+2, stripecdn.com
+2, appleid.apple.com
+2, pay.apple.com
+2, humb.apple.com
+2, withpersona.com
+2, frompersona.com
+2, identrust.com
+2, featuregates.org
+2, featureassets.org
+2, prodregistryv2.org
+2, statsig.com
+2, statsigapi.net
+2, segment.io
+2, segment.com
+2, sentry.io
+2, browser-intake-us5-datadoghq.com
+2, http-intake.logs.us5-datadoghq.com
+2, intercom.io
+2, intercomcdn.com
+2, intercomassets.com
+2, usefathom.com
+2, growthbook.io
+2, launchdarkly.com
+2, algolia.net
+0, 199.47.142.0/23
+0, 24.199.123.28/32
+0, 64.23.132.171/32
+1, 2604:f20::/32

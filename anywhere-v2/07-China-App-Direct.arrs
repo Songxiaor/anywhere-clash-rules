@@ -1,0 +1,248 @@
+name = 国内应用直连
+routing = 1
+# Unified DIRECT ruleset for LAN + China-first apps on Mac & iOS.
+# Deduplicated: redundant subdomains covered by parent suffixes have been removed.
+# Intentionally NOT included: overseas AI, larksuite.com, byteoversea.com, TikTok international.
+# Anywhere types: 0 IPv4 CIDR, 1 IPv6 CIDR, 2 Domain Suffix, 3 Domain Keyword
+
+# ===== 局域网 / 内网设备直连 =====
+0, 10.0.0.0/8
+0, 127.0.0.0/8
+0, 100.64.0.0/10
+0, 172.16.0.0/12
+0, 192.168.0.0/16
+2, local
+2, lan
+
+# ===== 得到大脑 / Dedao =====
+2, dedao.cn
+2, igetget.com
+2, umiwi.com
+2, luojilab.com
+2, biji.com
+2, trytalks.com
+
+# ===== 微信 / 腾讯全系 =====
+2, qq.com
+2, wechat.com
+2, weixin.com
+2, servicewechat.com
+2, qpic.cn
+2, qlogo.cn
+2, gtimg.cn
+2, idqqimg.com
+2, tenpay.com
+2, tencent.com
+2, tencent-cloud.com
+2, myqcloud.com
+2, vod-qcloud.com
+2, qcloud.com
+2, tencentcloudapi.com
+2, qcloudimg.com
+2, tlivesource.com
+2, tliveplay.com
+2, tlivecdn.com
+2, wxaurl.cn
+2, url.cn
+2, weiyun.com
+2, foxmail.com
+2, qidian.com
+2, yuewen.com
+2, readnovel.com
+2, tencentgames.com
+2, qqopenapp.com
+2, wegame.com
+2, tencentmusic.com
+
+# ===== 国内 AI 与输入法（千问 / 通义 / Kimi / DeepSeek / 豆包 / MiniMax / 智谱）=====
+2, qianwen.com
+2, tongyi.com
+2, doubao.com
+2, kimi.com
+2, moonshot.cn
+2, deepseek.com
+2, minimaxi.com
+2, chatglm.cn
+2, zhipuai.cn
+2, aihot.news
+2, oceancloudapi.com
+2, bytedanceapi.com
+
+# ===== 国内抖音 / 剪映 / 字节跳动（不含 TikTok / byteoversea / larksuite）=====
+2, douyin.com
+3, douyin
+2, iesdouyin.com
+2, douyinpic.com
+2, douyinvod.com
+2, douyinstatic.com
+2, amemv.com
+2, snssdk.com
+2, zijieapi.com
+2, zjcdn.com
+2, bytedance.com
+2, bytedance.net
+2, bytedns.net
+2, byte-test.com
+2, byteimg.com
+2, bytecdn.cn
+2, byted-static.com
+2, bytetos.com
+2, pstatp.com
+2, volces.com
+2, volcvideo.com
+2, volcengine.com
+2, toutiao.com
+2, toutiaoimg.com
+2, toutiaoimg.cn
+2, toutiaocdn.com
+2, toutiaostatic.com
+2, ixigua.com
+2, jianying.com
+2, capcut.cn
+2, ulikecam.com
+2, faceu.mobi
+2, qishui.com
+
+# ===== 飞书 Feishu (仅国内版) =====
+2, feishu.cn
+2, feishucdn.com
+2, feishu.net
+2, larkoffice.com
+2, bitable.cn
+2, bytegoofy.com
+
+# ===== 剪辑与效率（开拍 / 幕布 / WPS / 百度网盘 / 夸克 / 网易 UU）=====
+2, meitu.com
+2, meitudata.com
+2, meitustat.com
+2, kaipai.com
+2, mubu.com
+2, wps.cn
+2, wpscdn.cn
+2, kdocs.cn
+2, kingsoft.com
+2, ksosoft.com
+2, wps.com
+2, baidu.com
+2, baidubce.com
+2, baidupcs.com
+2, bcebos.com
+2, bdstatic.com
+2, bdimg.com
+2, dwstatic.com
+2, quark.cn
+2, myquark.cn
+2, sm.cn
+2, 163.com
+2, 126.net
+2, netease.com
+2, xcknow.cn
+2, whxcknow.com
+2, xingchengzhidao.com
+2, yuntaitec.com
+2, qianyanwy.com.cn
+
+# ===== 哔哩哔哩 Bilibili =====
+2, bilibili.com
+2, b23.tv
+2, hdslb.com
+2, bilivideo.com
+2, biliapi.net
+
+# ===== 阿里系 =====
+2, alibaba.com
+2, alicdn.com
+2, aliyuncs.com
+2, uc.cn
+2, dingtalk.com
+2, taobao.com
+2, tmall.com
+2, taobaocdn.com
+2, tbcdn.cn
+2, alipay.com
+2, alipayobjects.com
+2, alipcdn.com
+2, goofish.com
+2, amap.com
+2, autonavi.com
+2, aliyundrive.com
+2, alipan.com
+2, youku.com
+2, ykimg.com
+2, yuque.com
+2, cainiao.com
+
+# ===== 电商 / 快递 / 出行 / 生活服务 =====
+2, jd.com
+2, 360buyimg.com
+2, jdcdn.com
+2, yangkeduo.com
+2, pinduoduo.com
+2, pddpic.com
+2, dewu.com
+2, vip.com
+2, sf-express.com
+2, 12306.cn
+2, didichuxing.com
+2, ctrip.com
+2, qunar.com
+2, meituan.com
+2, meituan.net
+2, dianping.com
+2, ele.me
+2, elemecdn.com
+2, freshhema.com
+
+# ===== 社交 / 内容社区 / 音视频 / 智能家居 =====
+2, xiaohongshu.com
+2, xhscdn.com
+2, weibo.com
+2, weibo.cn
+2, sinaimg.cn
+2, sina.com.cn
+2, zhihu.com
+2, zhimg.com
+2, douban.com
+2, doubanio.com
+2, iqiyi.com
+2, iqiyipic.com
+2, mgtv.com
+2, ximalaya.com
+2, kugou.com
+2, kuwo.cn
+2, xiaoyuzhoufm.com
+2, ys7.com
+2, ezviz.com
+2, ezvizlife.com
+2, mi.com
+2, mi-img.com
+2, mifile.cn
+
+# ===== 银行与证券 =====
+2, icbc.com.cn
+2, abchina.com
+2, boc.cn
+2, ccb.com
+2, bankcomm.com
+2, psbc.com
+2, cmbchina.com
+2, citicbank.com
+2, ecitic.com
+2, spdb.com.cn
+2, cmbc.com.cn
+2, cib.com.cn
+2, cebbank.com
+2, cgbchina.com.cn
+2, hxb.com.cn
+2, pingan.com
+2, bankofbeijing.com.cn
+2, bankofshanghai.com
+2, nbcb.com.cn
+2, webank.com
+2, mybank.cn
+2, unionpay.com
+2, unionpayintl.com
+2, 95516.com
+2, 10jqka.com.cn
+2, eastmoney.com
+2, xueqiu.com

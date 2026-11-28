@@ -1,0 +1,6 @@
+name = 拦截所有IPv6流量
+routing = 2
+# Reject all IPv6 traffic
+# Anywhere types: 0 IPv4 CIDR, 1 IPv6 CIDR, 2 Domain Suffix, 3 Domain Keyword
+
+1, ::/0

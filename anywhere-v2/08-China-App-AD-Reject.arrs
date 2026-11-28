@@ -1,0 +1,72 @@
+name = 国内App去广告
+routing = 2
+# 精简高命中、零误杀的国内 App 开屏与信息流去广告规则（routing = 2 默认拒绝）
+# 全部采用比主域名更具体的广告子域，在 Anywhere 中可精准压过国内直连而不影响 App 正常功能
+# Anywhere types: 0 IPv4 CIDR, 1 IPv6 CIDR, 2 Domain Suffix, 3 Domain Keyword
+
+# ===== 腾讯优量汇 / 广点通 SDK =====
+2, gdt.qq.com
+2, adsmind.gdtimg.com
+2, adsmind.ugdtimg.com
+2, pgdt.gtimg.cn
+2, qzs.gdtimg.com
+2, splashqqlive.gtimg.com
+
+# ===== 字节穿山甲 / 汽水音乐广告 SDK =====
+2, pangolin-sdk-toutiao.com
+2, pangolin-sdk-toutiao-b.com
+2, pangolin-sdk-toutiao1.com
+2, pglstatp-toutiao.com
+2, ad.zijieapi.com
+2, ads3-normal-hl.zijieapi.com
+2, ads5-normal-hl.zijieapi.com
+2, ads3-normal-lq.zijieapi.com
+2, ads5-normal-lq.zijieapi.com
+
+# ===== 百度 / 阿里妈妈 / 快手广告联盟 =====
+2, mobads.baidu.com
+2, mobads-logs.baidu.com
+2, pos.baidu.com
+2, cpro.baidustatic.com
+2, adash.man.aliyuncs.com
+2, adashx.m.taobao.com
+2, adashxgc.ut.taobao.com
+2, open.e.kuaishou.com
+
+# ===== 高德地图去广告 =====
+2, ad.amap.com
+2, optimus-ads.amap.com
+2, amap-aos-info-nogw.amap.com
+
+# ===== 知乎去广告 =====
+2, appcloud2.in.zhihu.com
+2, mqtt.zhihu.com
+2, sugar.zhihu.com
+2, zhihu-web-analytics.zhihu.com
+2, crash2.zhihu.com
+
+# ===== 喜马拉雅去广告 =====
+2, ad.ximalaya.com
+2, adbs.ximalaya.com
+2, adse.ximalaya.com
+2, adse.wsa.ximalaya.com
+2, adbehavior.ximalaya.com
+2, adwbs.ximalaya.com
+2, adsebs.ximalaya.com
+
+# ===== 京东去广告 =====
+2, dns.jd.com
+2, janapi.jd.com
+2, xlog.jd.com
+2, mercury.jd.com
+2, dsp-x.jd.com
+2, kepler.jd.com
+2, im-x.jd.com
+2, bdsp.x.jd.com
+
+# ===== B站 / 微博零误杀开屏域 =====
+2, ads.bilibili.com
+2, cm.bilibili.com
+2, ad.weibo.com
+2, adimg.uve.weibo.com
+2, biz.weibo.com

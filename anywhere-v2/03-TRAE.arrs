@@ -1,0 +1,35 @@
+name = TRAE
+routing = 0
+# TRAE Work / TRAE SOLO strict-isolation routing rules.
+# Assign this rule set to a Japan node in Anywhere.
+# Shared third-party APIs are deliberately excluded to avoid affecting other apps.
+# Anywhere types: 0 IPv4 CIDR, 1 IPv6 CIDR, 2 Domain Suffix, 3 Domain Keyword
+
+# TRAE first-party services, regional clusters, authentication, CDN and sharing.
+2, trae.ai
+2, traeapi.us
+2, traecdn.us
+2, traecontent.com
+2, trae.com
+2, traeai.us
+2, solo-deeplink.ai
+
+# Dedicated ByteDance international hosts used by TRAE.
+2, icube-api-sg.tiktok-row.net
+2, ide-market-us.tiktok-row.net
+2, ide-us.tiktok-row.net
+2, p-icube-feecback-oversea-sg.tiktok-row.net
+2, solo-web.tiktok-row.net
+2, copilot-sg-og.byteintl.net
+2, copilot-og.byteintl.net
+2, copilot-sg.byteintl.net
+2, copilot.byteintl.net
+2, copilot-cn.bytedance.net
+2, icube-api.bytedance.net
+2, ide-market.bytedance.net
+2, cdn-tos.bytedance.net
+2, tosv.tiktokd.org
+
+# TRAE voice and marketplace assets.
+2, voice.ap-southeast-1.bytepluses.com
+2, p16-market-sg.ibyteimg.com

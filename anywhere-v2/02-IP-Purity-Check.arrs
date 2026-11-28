@@ -1,0 +1,60 @@
+name = IP纯净度检测
+routing = 0
+# IP purity / echo sites. Route this rule set to the SAME exit as AI落地-纯净家宽
+# (the residential / landing node), so these sites report the IP that Claude/ChatGPT/Gemini see.
+# Anywhere types: 0 IPv4 CIDR, 1 IPv6 CIDR, 2 Domain Suffix, 3 Domain Keyword
+
+# 纯净度 / 风险评分
+2, net.coffee
+2, webshare.io
+2, ping0.cc
+2, ipqualityscore.com
+2, scamalytics.com
+2, iphey.com
+2, pixelscan.net
+2, browserscan.net
+2, whoer.net
+2, browserleaks.com
+2, proxycheck.io
+2, abuseipdb.com
+2, ippure.com
+2, ipcheck.ing
+2, ipleak.net
+
+# IP 归属 / 定位库
+2, ipinfo.io
+2, ip2location.com
+2, db-ip.com
+2, maxmind.com
+2, iplocation.net
+2, iplocation.io
+2, ip-api.com
+2, ipapi.co
+2, ipapi.is
+2, ipdata.co
+2, ipwho.is
+2, ipregistry.co
+2, ip.sb
+2, ip.gs
+2, ip125.com
+2, ipaddress.my
+2, ipaddress.com
+2, iplark.com
+
+# IP 回显
+2, whatismyipaddress.com
+2, whatismyip.com
+2, myip.com
+2, ifconfig.me
+2, ifconfig.co
+2, ipify.org
+2, 2ip.io
+2, ip.skk.moe
+2, test-ipv6.com
+2, cf-ns.com
+
+# 国内 IP 查询站（要看到落地 IP，所以也走家宽代理）
+2, ip.cn
+2, ip138.com
+2, ipip.net
+2, ipw.cn
