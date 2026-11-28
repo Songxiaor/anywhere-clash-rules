@@ -36,6 +36,7 @@ routing = 2
 2, nadvideo2.baidu.com
 2, v.adx.baidu.com
 2, httpdns.baidubce.com
+2, nsclick.baidu.com
 2, adash.man.aliyuncs.com
 2, adashx.m.taobao.com
 2, adashxgc.ut.taobao.com
@@ -93,6 +94,8 @@ routing = 2
 2, 1rtb.com
 2, zhangyuyidong.cn
 2, yunxish.com
+2, bxsnews.com
+2, go2yd.com
 0, 180.76.76.200/32
 2, beizi.biz
 2, sigmob.cn
