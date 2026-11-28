@@ -23,11 +23,18 @@ routing = 2
 2, ads3-normal-lq.zijieapi.com
 2, ads5-normal-lq.zijieapi.com
 
-# ===== 百度 / 阿里妈妈 / 快手广告联盟 =====
+# ===== 百度 / 百度网盘 / 阿里妈妈 / 快手广告联盟 =====
 2, mobads.baidu.com
 2, mobads-logs.baidu.com
 2, pos.baidu.com
+2, wn.pos.baidu.com
 2, cpro.baidustatic.com
+2, afd.baidu.com
+2, als.baidu.com
+2, eclick.baidu.com
+2, nadvideo2.baidu.com
+2, v.adx.baidu.com
+2, httpdns.baidubce.com
 2, adash.man.aliyuncs.com
 2, adashx.m.taobao.com
 2, adashxgc.ut.taobao.com
