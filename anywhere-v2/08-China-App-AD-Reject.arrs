@@ -77,3 +77,14 @@ routing = 2
 2, ad.weibo.com
 2, adimg.uve.weibo.com
 2, biz.weibo.com
+
+# ===== 第三方聚合竞价开屏广告 SDK（实测抓包补全）=====
+2, advlion.com
+2, 51y5.net
+2, adintl.cn
+2, beizi.biz
+2, sigmob.cn
+2, anythinktech.com
+2, toponadss.com
+2, tanx.com
+2, miaozhen.com
